@@ -1,16 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package paquete004;
 
-import paquete001.Persona;
 
 /**
  *
  * @author reroes
  */
-public class PagoAguaPotable {
+public class PagoAguaPotable extends Pagos{
+    
+    private String tipo;
+    
+    
+    
     public double calcularPago(String tipo){
         double pago = 0;
         if(tipo.equals("comercial")){
@@ -26,5 +26,19 @@ public class PagoAguaPotable {
         }
         
         return pago;
+    }
+
+    
+    @Override
+    public void establecerTotal(){
+        calcularPago(obtenerTipo());
+    }
+    
+    public String obtenerTipo() {
+        return tipo;
+    }
+    
+    public void establecerTipo(String x) {
+        tipo = x;
     }
 }

@@ -1,16 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package paquete004;
 
 import paquete001.Persona;
+import paquete003.BilleteraPagos;
 
 /**
  *
  * @author reroes
  */
-public class PagoLuzElectrica {
+public class PagoLuzElectrica extends Pagos{
 
     public double calcularPago() {
         double pago = 0;
@@ -26,4 +23,20 @@ public class PagoLuzElectrica {
 
         return pago;
     }
+    
+    
+    
+    @Override
+    public void establecerTotal(){
+        calcularPago();
+    }
+    
+    public String toString(){
+        String cadena = "";
+        
+        cadena= String.format("%sPago Predial: ",cadena, calcularPago());
+        
+        return cadena;
+    }
+    
 }

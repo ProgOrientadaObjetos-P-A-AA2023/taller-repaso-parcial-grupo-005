@@ -1,13 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package paquete002;
 
-/**
- *
- * @author reroes
- */
-public class Ciudad {
-    String nombreCiudad;
+
+import paquete001.Persona;
+
+
+public class Ciudad extends Persona{
+    
+    private String nombreCiudad;
+
+    public Ciudad(String n, String ap, int ed, String ced, Object c) {
+        super(n, ap, ed, ced, c);
+    }
+
+    
+    
+    
+    public String obtenerNombreCiudad() {
+        return nombreCiudad;
+    }
+    
+    public void establecerNombreCiudad(String x) {
+        nombreCiudad = x;
+    }
+    
+    
+    
 }
